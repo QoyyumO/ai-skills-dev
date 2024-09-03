@@ -39,14 +39,15 @@ Ensure you have the following installed:
 * npm or yarn
 * Firebase account
 * Clerk account
+* Groq Account
 
 # Installation
 
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/skill-up-ai.git
-   cd skill-up-ai
+   git clone https://github.com/QoyyumO/ai-skills-dev.git
+   cd ai-skills-dev
    ```
 
 2. **Install Dependencies:**
@@ -59,6 +60,8 @@ Ensure you have the following installed:
    Create a `.env.local` file at the root of the project and add your environment variables:
 
    ```plaintext
+   GROQ_API_KEY=your-groq-api-key
+   CLERK_SECRET_KEY=your-clerk-secret-key
    NEXT_PUBLIC_CLERK_FRONTEND_API=your-clerk-frontend-api
    FIREBASE_API_KEY=your-firebase-api-key
    FIREBASE_AUTH_DOMAIN=your-firebase-auth-domain
