@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Skill Up AI** is an AI-powered skill development platform designed to help users enhance their skills through personalized recommendations and learning paths. Built with Next.js and TypeScript, this platform leverages advanced AI technologies, Firebase for backend services, and MUI for a responsive and clean user interface.
+**Skill Up AI** is an AI-powered skill development platform designed to help users enhance their skills through personalized recommendations and learning paths. Built with Next.js and TypeScript, this platform leverages advanced AI technologies like Groq, Firebase for backend services, and MUI for a responsive and clean user interface.
 
 ## Features
 
