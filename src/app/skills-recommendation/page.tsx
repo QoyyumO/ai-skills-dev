@@ -42,12 +42,12 @@ export default function SkillRecommendations() {
         // Save suggested skills to Firestore
         await saveSuggestedSkills(user.id, skillsArray); // Save skills to Firestore
       } else {
-        console.error("Unexpected data format:", data);
+        console.error("Unexpected data format");
         setRecommendedSkills([]);
       }
 
     } catch (error) {
-      console.error("Failed to fetch skills:", error);
+      console.error("Failed to fetch skills");
       setRecommendedSkills([]);
     } finally {
       setLoading(false);
@@ -61,9 +61,9 @@ export default function SkillRecommendations() {
         skills,
         createdAt: new Date(),
       });
-      console.log('Document written with ID: ', docRef.id);
+      console.log('Document written with ID ');
     } catch (e) {
-      console.error('Error adding document: ', e);
+      console.error('Error adding document: ');
     }
   };
 

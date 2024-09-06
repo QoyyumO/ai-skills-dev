@@ -74,7 +74,7 @@ const LearningPaths: React.FC = () => {
         await signInWithCustomToken(auth, token || '');
         await fetchLearningPaths();
       } catch (error) {
-        console.error("Error during Firebase initialization:", error);
+        console.error("Error during Firebase initialization");
       }
     };
 
@@ -98,7 +98,7 @@ const LearningPaths: React.FC = () => {
       const data = await response.json();
       return data;
     } catch (error) {
-      console.error("Error fetching suggested courses: ", error);
+      console.error("Error fetching suggested courses");
       return { suggestedCourses: [], tutorials: [], exercises: [] };
     }
   };
@@ -110,7 +110,7 @@ const LearningPaths: React.FC = () => {
       await deleteDoc(pathRef);
       setLearningPaths((prevPaths) => prevPaths.filter(path => path.id !== id));
     } catch (error) {
-      console.error('Error deleting learning path:', error);
+      console.error('Error deleting learning path');
     }
   };
   const handleGoalCompletion = async (goalId: string, pathId: string, isCompleted: boolean) => {
@@ -132,7 +132,7 @@ const LearningPaths: React.FC = () => {
         )
       );
     } catch (error) {
-      console.error('Error updating goal completion:', error);
+      console.error('Error updating goal completion');
     }
   };
   
@@ -147,7 +147,7 @@ const LearningPaths: React.FC = () => {
         )
       );
     } catch (error) {
-      console.error('Error deleting goal:', error);
+      console.error('Error deleting goal');
     }
   };
   
@@ -163,7 +163,7 @@ const LearningPaths: React.FC = () => {
       // Refresh the learning paths to include the new goal
       await fetchLearningPaths();
     } catch (error) {
-      console.error('Error adding goal:', error);
+      console.error('Error adding goal');
     }
   };
   const addLearningPath = async () => {
@@ -198,7 +198,7 @@ const LearningPaths: React.FC = () => {
       setNewPathDescription('');
       await fetchLearningPaths();
     } catch (error) {
-      console.error("Error adding learning path:", error);
+      console.error("Error adding learning path");
     }
   };
   

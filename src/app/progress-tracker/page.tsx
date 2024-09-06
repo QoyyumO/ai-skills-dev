@@ -80,7 +80,7 @@ const ProgressTracker: React.FC = () => {
       setLearningPathsWithGoals(learningPathsData);
       setLoading(false);
     } catch (error) {
-      console.error("Error fetching learning paths and goals:", error);
+      console.error("Error fetching learning paths and goals");
       setLoading(false);
     }
   };
@@ -128,7 +128,7 @@ const saveProgressToFirestore = async (
     // Release the mutex lock
     delete locks[lockKey];
   } catch (error) {
-    console.error("Error saving progress to Firestore:", error);
+    console.error("Error saving progress to Firestore");
   }
 };
 
